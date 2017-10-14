@@ -1,57 +1,104 @@
 <html id="html" style="background: #333;">
 	<head>
 		<title id="title">$0 Cash</title>
-		<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
-		<link rel="stylesheet" href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css">
-		<link rel="stylesheet" href="styles.css">
+		<style>
+			#html{
+				background-image: url("bg.jpg") !important;
+			}
+		</style>
+		<link rel="stylesheet" href="resources/css/reload.css">
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
 	</head>
 	<body>
-		<div class="mdc-card demo-card" style="width:400px; margin: auto; background-color: rgba(255,255,255,0.95);">
-			<section class="mdc-card__primary">
-				<div id="container" style="width:100%; height:5px;">
-				  <div id="progressbar" style="width:0%;background-color: #4286f4; height:5px;"></div>
+		<div class="r-container-l">
+			<div class="row">
+	      <div class="col-sm">
+					<div class="r-card r-card-white">
+						<div class="r-card-head">
+								<div id="container" style="width:100%; height:5px;">
+								  <div id="progressbar" style="width:0%;background-color: #4286f4; height:5px;"></div>
+								</div>
+				        <p class="r-card-title">Statistics</p>
+				        <div class="r-card-head-break"></div>
+					    </div>
+					    <div class="r-card-body">
+						    <p class="r-text-title-sub" id="gameCount">0 Games Released</p>
+								<p class="r-text-caption" id="cashCount">$0 Cash</p>
+				        <p class="r-text-caption" id="cashPerSec">Cash Per Second: 0</p>
+				        <button id="newgamerel" class="r-btn r-btn-accent-sm r-ripple" data-mdc-auto-init="MDCRipple" onclick="releaseNewGame()">Release game</button>
+					    </div>
+					</div>
+					<div class="r-card" style="width:400px; margin: auto; background-color: rgba(255,255,255,0.95);">
+							
+					</div>
+					<div style="margin-top: 40px;"></div>
+					<div class="r-card r-card-white">
+						<div class="r-card-head">
+							<p class="r-card-title">Improve Your Development Skills</p>
+						</div>
+						<div class="r-card-head-break"></div>
+						<div class="r-card-body">
+							<div class="row">
+								<div class="col-xs">
+									<p class="r-text-title-sub">Gain More Money Per Game</p>
+									<button class="r-btn r-btn-accent-sm r-ripple" style="width: 100%;" onclick="takeHtmlCourse()">Take HTML Course</button>
+									<div class="r-indent-left"><p id="htmlInfo" class="r-text-caption" style="margin-top: 2px;">0 | $10</p></div>
+									<button class="r-btn r-btn-accent-sm r-ripple" style="width: 100%;" onclick="takeCssCourse()">Take CSS Course</button>
+									<div class="r-indent-left"><p id="cssInfo" class="r-text-caption" style="margin-top: 2px;">0 | $1000</p></div>
+					        <button class="r-btn r-btn-accent-sm r-ripple" style="width: 100%;" onclick="takeJsCourse()">Take Javascript Course</button>
+									<div class="r-indent-left"><p id="jsInfo" class="r-text-caption" style="margin-top: 2px;">0 | $50000</p></div>
+					        <button class="r-btn r-btn-accent-sm r-ripple" style="width: 100%;" onclick="takeTsCourse()">Take Typescript Course</button>
+									<div class="r-indent-left"><p id="tsInfo" class="r-text-caption" style="margin-top: 2px;">0 | $400000</p></div>
+					        <button class="r-btn r-btn-accent-sm r-ripple" style="width: 100%;" onclick="takeCsCourse()">Take C# Course</button>
+									<div class="r-indent-left"><p id="csInfo" class="r-text-caption" style="margin-top: 2px;">0 | $1250000</p></div>
+					        <button class="r-btn r-btn-accent-sm r-ripple" style="width: 100%;" onclick="takeCppCourse()">Take C++ Course</button>
+									<div class="r-indent-left"><p id="cppInfo" class="r-text-caption" style="margin-top: 2px;">0 | $5000000</p></div>
+								</div>
+								<div class="col-xs">
+									<p class="r-text-title-sub">&lt;&lt;&lt;</p>
+									<button class="r-btn r-btn-accent-sm r-ripple" style="width: 100%;" onclick="takeSwiftCourse()">Take Swift Course</button>
+									<div class="r-indent-left"><p id="swiftInfo" class="r-text-caption" style="margin-top: 2px;">0 | $12500000</p></div>
+									<button class="r-btn r-btn-accent-sm r-ripple" style="width: 100%;" onclick="takeWASCourse()">Take WebAssembly Course</button>
+									<div class="r-indent-left"><p id="wasinfo" class="r-text-caption" style="margin-top: 2px;">0 | $150000000</p></div>
+									<button class="r-btn r-btn-accent-sm r-ripple" style="width: 100%;" onclick="takeJavaCourse()">Take Java Course</button>
+									<div class="r-indent-left"><p id="javainfo" class="r-text-caption" style="margin-top: 2px;">0 | $1000000000</p></div>
+									<button class="r-btn r-btn-accent-sm r-ripple" style="width: 100%;" onclick="takeSQLCourse()">Take SQL Course</button>
+									<div class="r-indent-left"><p id="sqlinfo" class="r-text-caption" style="margin-top: 2px;">0 | $5000000000</p></div>
+									<button class="r-btn r-btn-accent-sm r-ripple" style="width: 100%;" onclick="takeGOCourse()">Take GO Course</button>
+									<div class="r-indent-left"><p id="goinfo" class="r-text-caption" style="margin-top: 2px;">0 | $25000000000</p></div>
+									<button class="r-btn r-btn-accent-sm r-ripple" style="width: 100%;" onclick="takeAngularCourse()">Take AngularJS Course</button>
+									<div class="r-indent-left"><p id="angularinfo" class="r-text-caption" style="margin-top: 2px;">0 | $100000000000</p></div>
+								</div>
+<!-- 								<div class="col-xs">
+									<p class="r-text-title-sub">Auto Upgrades</p>
+									<button class="r-btn r-btn-accent-sm r-ripple" style="width: 100%;">Automatically Release Finished Games</button>
+									<div class="r-indent-left"><p class="r-text-caption" style="margin-top: 2px;">$1,000,000,000</p></div>
+								</div> -->
+							</div>
+						</div>
+					</div>
+					<div style="margin-top: 40px;"></div>
+					<div class="r-card r-card-white">
+						<div class="r-card-head">
+							<p class="r-card-title">Help.</p>
+			      </div>
+			      <div class="r-card-head-break"></div>
+			      <div class="r-card-body">
+			      	<p class="r-card-text">There Is Currently No End Goal But Trying To Get To 1 Quintillion (1,000,000,000,000,000) Is Hard Enough. Try That.</p><p class="r-card-text">New Features Coming Soon</p>
+							<p class="r-card-text">The Game Saves Automatically Every Second.</p>
+			      </div>
+					</div>
 				</div>
-				<p class="mdc-typography--caption" id="gameCount">0 Games Released</p>
-				<p class="mdc-typography--caption" id="cashCount">$0 Cash</p>
-        <p class="mdc-typography--caption" id="cashPerSec">Cash Per Second: 0</p>
-				<button id="newgamerel" class="mdc-button mdc-button--flat mdc-ripple-surface mdc-button--upgraded" data-mdc-auto-init="MDCRipple" onclick="releaseNewGame()">Release game</button>
-			</section>
-		</div>
-		<div style="margin-top: 40px;"></div>
-		<div class="mdc-card demo-card" style="width:400px; margin: auto; background-color: rgba(255,255,255,0.95);">
-			<section class="mdc-card__primary" style="text-align: center;">
-				<p class="mdc-typography--title">Improve Your Development Skills</p>
-				<button class="mdc-button mdc-button--raised mdc-ripple-surface mdc-button--upgraded" data-mdc-auto-init="MDCRipple" style="width: 100%;" onclick="takeHtmlCourse()">Take HTML Course</button>
-				<p id="htmlInfo" class="mdc-typography--subheading1" style="margin-top: 2px;">0 | $10</p>
-				<button class="mdc-button mdc-button--raised mdc-ripple-surface mdc-button--upgraded" data-mdc-auto-init="MDCRipple" style="width: 100%;" onclick="takeCssCourse()">Take CSS Course</button>
-				<p id="cssInfo" class="mdc-typography--subheading1" style="margin-top: 2px;">0 | $1000</p>
-        <button class="mdc-button mdc-button--raised mdc-ripple-surface mdc-button--upgraded" data-mdc-auto-init="MDCRipple" style="width: 100%;" onclick="takeJsCourse()">Take Javascript Course</button>
-				<p id="jsInfo" class="mdc-typography--subheading1" style="margin-top: 2px;">0 | $50000</p>
-        <button class="mdc-button mdc-button--raised mdc-ripple-surface mdc-button--upgraded" data-mdc-auto-init="MDCRipple" style="width: 100%;" onclick="takeTsCourse()">Take Typescript Course</button>
-				<p id="tsInfo" class="mdc-typography--subheading1" style="margin-top: 2px;">0 | $400000</p>
-        <button class="mdc-button mdc-button--raised mdc-ripple-surface mdc-button--upgraded" data-mdc-auto-init="MDCRipple" style="width: 100%;" onclick="takeCsCourse()">Take C# Course</button>
-				<p id="csInfo" class="mdc-typography--subheading1" style="margin-top: 2px;">0 | $1250000</p>
-        <button class="mdc-button mdc-button--raised mdc-ripple-surface mdc-button--upgraded" data-mdc-auto-init="MDCRipple" style="width: 100%;" onclick="takeCppCourse()">Take C++ Course</button>
-				<p id="cppInfo" class="mdc-typography--subheading1" style="margin-top: 2px;">0 | $5000000</p>
-        <button class="mdc-button mdc-button--raised mdc-ripple-surface mdc-button--upgraded" data-mdc-auto-init="MDCRipple" style="width: 100%;" onclick="takeSwiftCourse()">Take Swift Course</button>
-				<p id="swiftInfo" class="mdc-typography--subheading1" style="margin-top: 2px;">0 | $12500000</p>
-			</section>
-		</div>
-		<div style="margin-top: 40px;"></div>
-		<div class="mdc-card demo-card" style="width:400px; margin: auto; background-color: rgba(255,255,255,0.95);">
-			<section class="mdc-card__primary">
-				<div style="margin-top: -15px;"></div>
-				<p class="mdc-typography--title">Actions</p>
-        <p class="mdc-typography--caption">There Is Currently No End Goal But Trying To Get To 10,000,000,000 Is Hard Enough. Try That.</p>
-				<p class="mdc-typography--caption">The Game Saves Automatically Every Second.</p>
-      </section>
+			</div>
 		</div>
 	</body>
 	<footer>
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-		<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
-		<script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
-		<script src="app.js"></script>
-		<script>window.mdc.autoInit();</script>
-	</footer>
+      <!-- Keep This Load Order To Avoid It Breaking -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+      <script src="bower_components/legitripple/js/ripple.js"></script>
+      <script src="resources/js/reload.js"></script>
+      <script src="resources/js/prism.js"></script>
+      <script src="game.js"></script>
+  </footer>
 </html>

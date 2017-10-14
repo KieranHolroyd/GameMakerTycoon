@@ -1,0 +1,281 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400');
+@import url('../../bower_components/legitripple/css/ripple.css');
+@import url('prism.css');
+@import url('../../bower_components/flexboxgrid/dist/flexboxgrid.min.css');
+*{
+    padding: 0;
+    margin: 0;
+    outline: none !important;
+    font-family: 'Roboto', sans-serif;
+}
+/* Buttons */
+.r-btn{
+    display: block;
+    border: none;
+    margin: 10px;
+    transition: .3s ease;
+}
+.r-btn:hover{
+    cursor: hand;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.25);
+}
+.r-btn:active{
+    box-shadow: 0px 5px 25px 0px rgba(0,0,0,0.25);
+}
+.r-btn-primary{
+    color: white;
+    padding: 15px;
+    font-size: 25px;
+    min-width: 150px;
+    min-height: 50px;
+    border-radius: 30px;
+    background: #18e2e0; 
+    background: -webkit-linear-gradient(left, #26D0CE, #18e2e0);
+    background: -o-linear-gradient(left, #26D0CE, #18e2e0);
+    background: linear-gradient(to right, #26D0CE, #18e2e0);
+}
+.r-btn-primary-sm{
+    color: white;
+    padding: 7.5px;
+    min-width: 75px;
+    min-height: 25px;
+    border-radius: 15px;
+    background: #18e2e0; 
+    background: -webkit-linear-gradient(left, #26D0CE, #18e2e0);
+    background: -o-linear-gradient(left, #26D0CE, #18e2e0);
+    background: linear-gradient(to right, #26D0CE, #18e2e0);
+}
+.r-btn-secondary{
+    color: white;
+    padding: 15px;
+    font-size: 25px;
+    min-width: 150px;
+    min-height: 50px;
+    border-radius: 30px;
+    background: #db0889;
+    background: -webkit-linear-gradient(left, #ad05a9, #db0889);
+    background: -o-linear-gradient(left, #ad05a9, #db0889);
+    background: linear-gradient(to right, #ad05a9, #db0889);
+}
+.r-btn-secondary-sm{
+    color: white;
+    padding: 7.5px;
+    min-width: 75px;
+    min-height: 25px;
+    border-radius: 15px;
+    background: #db0889;
+    background: -webkit-linear-gradient(left, #ad05a9, #db0889);
+    background: -o-linear-gradient(left, #ad05a9, #db0889);
+    background: linear-gradient(to right, #ad05a9, #db0889);
+}
+.r-btn-accent{
+    color: white;
+    padding: 15px;
+    font-size: 25px;
+    min-width: 150px;
+    min-height: 50px;
+    border-radius: 30px;
+    background: #FF512F;
+    background: -webkit-linear-gradient(left, #fc2f7e, #FF512F);
+    background: -o-linear-gradient(left, #fc2f7e, #FF512F);
+    background: linear-gradient(to right, #fc2f7e, #FF512F);
+}
+.r-btn-accent-sm{
+    color: white;
+    padding: 7.5px;
+    min-width: 75px;
+    min-height: 25px;
+    border-radius: 15px;
+    background: #FF512F;
+    background: -webkit-linear-gradient(left, #fc2f7e, #FF512F);
+    background: -o-linear-gradient(left, #fc2f7e, #FF512F);
+    background: linear-gradient(to right, #fc2f7e, #FF512F);
+}
+/* Cards */
+.r-card{
+    margin: 10px;
+    min-width: 200px;
+    max-width: inherit;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.25);
+    background: white;
+}
+.r-card img{
+    border-radius: 15px;
+    padding: 10px;
+    max-width: calc(100% - 20px);
+}
+.r-card-head{
+    padding: 10px;
+}
+.r-card-head-break{
+    width: calc(100% - 20px);
+    margin: auto;
+    border-bottom: 1px solid #ddd;
+}
+.r-card-body{
+    padding: 10px;
+}
+.r-card .r-btn{
+    display: inline !important;
+    margin: 5px;
+}
+.r-card .r-card-text{
+    padding: 10px;
+    font-weight: 300;
+}
+.r-card .r-card-title{
+    color: inherit;
+    padding: 10px;
+    font-size: 25px;
+}
+.r-card-white{
+    color: #333;
+    background: white;
+}
+.r-card-primary{
+    color: white;
+    background: #18e2e0; 
+    background: -webkit-linear-gradient(left, #26D0CE, #18e2e0);
+    background: -o-linear-gradient(left, #26D0CE, #18e2e0);
+    background: linear-gradient(to right, #26D0CE, #18e2e0);
+}
+.r-card-secondary{
+    color: white;
+    background: #db0889;
+    background: -webkit-linear-gradient(left, #ad05a9, #db0889);
+    background: -o-linear-gradient(left, #ad05a9, #db0889);
+    background: linear-gradient(to right, #ad05a9, #db0889);
+}
+.r-card-accent{
+    color: white;
+    background: #FF512F;
+    background: -webkit-linear-gradient(left, #fc2f7e, #FF512F);
+    background: -o-linear-gradient(left, #fc2f7e, #FF512F);
+    background: linear-gradient(to right, #fc2f7e, #FF512F);
+}
+/* Text Options */
+.r-text-headline{
+    font-size: 100px;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+.r-text-headline-sub{
+    font-size: 24px;
+    color: #aaa;
+}
+.r-text-title{
+    font-size: 50px;
+}
+.r-text-title-sub{
+    font-size: 20px;
+    color: #aaa;
+}
+.r-text-heading{
+    font-size: 30px;
+    color: #333;
+}
+.r-text-subheading{
+    font-size: 20px;
+    color: #aaa;
+}
+.r-text-caption{
+    font-size: 15px;
+    font-weight: 300;
+}
+.r-text-tron{
+    font-size: 50px;
+    text-transform: uppercase;
+    font-weight: 100;
+}
+/* Containers */
+.r-container-l{
+    max-width: 1800px;
+    margin: auto;
+}
+.r-indent-left{
+    margin-left: 40px;
+}
+.r-indent-right{
+    margin-right: 40px;
+}
+/* Links */
+a{
+    all: initial;
+    cursor: pointer;
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+    color: #26D0CE;
+    border-bottom: rgba(0,0,0,0) 1px solid;
+    transition: border-bottom .4s ease;
+}
+a:hover{
+    all: initial;
+    cursor: hand;
+    font-family: 'Roboto', sans-serif;
+    color: #26D0CE;
+    text-decoration: none;
+    border-bottom: #26D0CE 1px solid;
+    transition: border-bottom .4s ease;
+}
+button a{
+    color: inherit !important;
+}
+.r-link-nounderline{
+    text-decoration: none;
+    color: #26D0CE;
+}
+.r-link-nounderline:hover{
+    text-decoration: none;
+    border-bottom: 0px;
+}
+/* Navigation */
+.r-vnl{
+    max-width: 300px;
+}
+.r-vnl a:first-child > .r-vnl-item{
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
+}
+.r-vnl a:last-child > .r-vnl-item{
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+}
+.r-vnl-item{
+    transition: all .3s ease;
+    list-style-type: none;
+    border: 1px solid #fc2f7e;
+    padding: 10px;
+    font-size: 14px;
+    color: #fc2f7e;
+    background: #ffffff;
+}
+.r-vnl-item:hover{
+    color: white;
+    background: #fc2f7e;
+}
+/* Code */
+.r-code{
+    max-width: 400px;
+    max-height: 400px;
+    overflow: auto;
+    border-radius: 15px;
+    border: 1px solid #222;
+    background: white !important;
+}
+/* Tron */
+.r-tron{
+    text-align: center;
+    margin: auto;
+}
+/* Navbars */
+.r-nav-fixed-top{
+    width: 100vw;
+    background: white;
+    position: fixed;
+    text-align: center;
+    top: 0;
+    left: 0;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.25);
+    z-index: 5;
+}
